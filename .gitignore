@@ -1,0 +1,26 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+# Infrastructure state and local plans
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+# Private evidence and exports
+private/
+raw-evidence/
+billing-exports/
+# Local tools
+__pycache__/
+node_modules/
+.DS_Store
+Thumbs.db
