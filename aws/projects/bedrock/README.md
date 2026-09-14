@@ -1,34 +1,24 @@
-# Amazon Bedrock — starter case study
-**Status: Planned · Execution: Not started · Reward: Not checked · Cost closure: Not started**
+# Amazon Bedrock — human-reviewed cloud security analysis
+**Status: Complete · September 13, 2026 UTC · Two requests; no persistent deployment**
 
-## Objective
-Run a bounded foundation-model playground evaluation and record output quality and inference cost.
+## Objective and architecture
+Evaluate a foundation model's advice against an EC2 configuration already validated by the operator.
+Bedrock chat playground → Amazon Nova Micro 1.0 → US Nova Micro cross-region inference profile → human review.
 
-## Proposed architecture
-Operator with scoped access → Bedrock playground → selected foundation model. Final configuration and diagram will be recorded after account eligibility and cost checks.
+## Implementation
+The initial prompt described Amazon Linux 2023, t3.micro, encrypted EBS, restricted SSH, key authentication, required IMDSv2, and no web ingress. A second prompt explicitly asked for recommendations that were not already implemented and clarified account access versus SSH.
 
-## Planned implementation
-Follow the eligible playground activity. Record model ID, region, prompt, output limit, and a small fixed number of requests; use synthetic prompts.
+## Validation and security decisions
+The first request reported 82 input tokens, 162 output tokens, and 712 ms. Across both requests, the recorded counters totaled 392 input and 418 output tokens.
 
-## Security decisions to validate
-Do not submit personal data or secrets. Avoid provisioned capacity and unrelated agents or knowledge bases; verify model access and pricing before invoking.
+The first answer identified several real strengths but repeated an existing SSH restriction, confused the relevance of MFA to the SSH path, and missed IMDSv2. After correction, the answer became more relevant but still needed review, particularly its description of NACL scope and the cost/complexity of additional services. No model recommendation was automatically applied.
 
-## Acceptance and evidence
-Record a sanitized prompt/response, model/settings, one defined quality criterion, and observed usage. Treat generated text as untrusted output.
-Actual results: **Not run**. Add sanitized evidence; no completion claim is supported yet.
-
-## Troubleshooting
-Pending execution. Record observed symptoms, cause, fix, and retest; do not invent failures.
+## Troubleshooting and lessons
+Prompt refinement improved relevance without making the answer authoritative. The useful outcome was the review process: compare advice to the actual configuration, reject redundant suggestions, and consider operational cost before adopting a control.
 
 ## Cost and cleanup
-Target: **$0 additional out-of-pocket cost**. Confirm eligible credits and current regional service/dependency pricing before creating resources. Record estimate, runtime, observed charges, credits applied, and later billing review separately.
+The onboarding summary showed Bedrock completed and $60 total additional credits across three activities. Both requests ended; no provisioned throughput, dedicated endpoint, knowledge base, or agent was created. Exact billed inference cost was not supplied.
 
-End testing and inspect any explicitly created resources or logging. Record whether only on-demand inference was used; verify no provisioned throughput or other persistent dependencies remain.
+This exercise is separate from the Help Desk's planned v0.3 AI assistant and the future Oberon integration.
 
-## Lessons learned
-Pending execution.
-
-## Completion
-Complete the minimum outcome, security checks, cleanup verification, and cost record before marking complete. Track promotional reward status separately. Optional extensions do not block completion.
-
-Follow the [AWS activity guide](../../README.md) and expand this brief using the [project template](../../../templates/PROJECT-TEMPLATE.md).
+[Completion record](../../COMPLETION-RECORD.md)

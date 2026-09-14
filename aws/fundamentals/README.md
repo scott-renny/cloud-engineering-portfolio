@@ -1,5 +1,3 @@
-# fundamentals
+# AWS fundamentals
 
-Account foundations and cost governance. Start with [AWS Budgets](aws-budgets/README.md).
-
-**Status:** Planned. No completed implementation is claimed. Add concise case studies with architecture, decisions, validation evidence, and cost closure.
+[AWS Budgets](aws-budgets/README.md) is complete and retained for cost visibility. See the [account baseline](../iam-security/account-baseline/README.md) and [completion record](../COMPLETION-RECORD.md).

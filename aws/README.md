@@ -1,5 +1,5 @@
 # AWS
-**Status: Planned activities; no execution evidence yet.**
+**Status — September 14, 2026:** Budgets, EC2, Bedrock and Family IT Help Desk v0.1 complete. RDS planned. See the [completion record](COMPLETION-RECORD.md) for evidence, retention and reward status.
 
 Start with [Budgets](fundamentals/aws-budgets/README.md), then [EC2](compute/ec2/README.md), [RDS](projects/rds/README.md), [Lambda](serverless/lambda/README.md), and [Bedrock](projects/bedrock/README.md).
 
