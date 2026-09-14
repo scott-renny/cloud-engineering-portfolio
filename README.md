@@ -3,18 +3,20 @@
 
 A growing portfolio of cloud systems designed, built, secured, validated, and cleaned up with clear engineering evidence. AWS is the starting point, followed by Azure and GCP; multi-cloud work will follow demonstrated needs and completed provider foundations.
 
-**Current status:** Repository foundation. All five AWS starter activities are **Planned**; no deployments, earned credits, or validated cloud capabilities are claimed.
+**Current status — September 14, 2026:** AWS Budgets, EC2, and Bedrock starter labs are complete. **[Family IT Help Desk v0.1](aws/projects/family-it-helpdesk/README.md) is complete**, accepted September 13 EDT / September 14 UTC. v0.2 ticket management has entered planning; implementation is not yet confirmed. RDS remains planned.
+
+The [completion record](aws/COMPLETION-RECORD.md) distinguishes observed results, retained resources, and unverified billing/reward details.
 
 ## Start here
 | Sequence | Project | Engineering focus | Status |
 |---|---|---|---|
-| 1 | [AWS Budgets](aws/fundamentals/aws-budgets/README.md) | Cost visibility and spending controls | Planned |
-| 2 | [EC2](aws/compute/ec2/README.md) | Secure compute lifecycle | Planned |
+| 1 | [AWS Budgets](aws/fundamentals/aws-budgets/README.md) | Cost visibility and spending controls | Complete · retained |
+| 2 | [EC2](aws/compute/ec2/README.md) | Secure compute lifecycle | Complete · instance/EBS removed |
 | 3 | [RDS](aws/projects/rds/README.md) | Managed database configuration and isolation | Planned |
-| 4 | [Lambda](aws/serverless/lambda/README.md) | Small web application and scoped execution | Planned |
-| 5 | [Bedrock](aws/projects/bedrock/README.md) | Bounded foundation-model evaluation | Planned |
+| 4 | [Lambda](aws/serverless/lambda/README.md) | Small web application and scoped execution | Complete · Help Desk v0.1 |
+| 5 | [Bedrock](aws/projects/bedrock/README.md) | Bounded foundation-model evaluation | Complete · two-request evaluation |
 
-See the [AWS activity guide](aws/README.md) for eligibility checks and the completion workflow. These are starting briefs, not completed case studies.
+See the [AWS activity guide](aws/README.md) for eligibility checks and the completion workflow. Completed entries now contain recorded outcomes; RDS remains a starting brief.
 
 ## Portfolio structure
 ```text
@@ -50,7 +52,7 @@ Statuses are **Planned**, **In progress**, **Blocked**, and **Complete**. Record
 ## Cost discipline
 The target is **$0 additional out-of-pocket cost**, not unlimited use of credits. Verify the account plan, eligible credits, expiration, regional pricing, and every dependent service before provisioning. Credits are finite and may not cover every charge. If coverage or cost is uncertain, pause the deployment and complete the design locally.
 
-Keep experiments small, short-lived, and manually controlled. Budget alerts are visibility controls, not a hard spending cap. Record estimated and observed usage separately from credit rewards. Clean up in the same session, then revisit billing after usage data has settled. No paid upgrades, subscriptions, or always-on infrastructure are part of this scaffold.
+Keep experiments small, short-lived, and manually controlled. Budget alerts are visibility controls, not a hard spending cap. Record estimated and observed usage separately from credit rewards. Clean up in the same session, then revisit billing after usage data has settled. The budget and Family IT Help Desk services are deliberately retained for use. Exact ongoing charges remain unverified; $0 additional cost is the operating target, not a measured billing claim.
 
 ## Connected engineering work
 | Work | Relationship to this portfolio |
@@ -60,7 +62,7 @@ Keep experiments small, short-lived, and manually controlled. Budget alerts are 
 | [Oberon integration note](architecture/oberon-integration.md) | Future AI engineering connection, beginning with a bounded Bedrock evaluation. A public Oberon repository URL has not yet been verified. |
 
 ## Progression
-1. Complete the five AWS starter studies with evidence and cost closure.
+1. Preserve completed AWS milestones; finish RDS separately and reconcile remaining credit/billing records.
 2. Extend AWS into least-privilege IAM, VPC design, logging, encryption, and repeatable infrastructure.
 3. Establish Azure identity, networking, compute, and security foundations.
 4. Add GCP foundations, then justify cross-cloud projects through concrete requirements.

@@ -1,5 +1,7 @@
-# projects
+# AWS projects
 
-Service and integrated case studies: [RDS](rds/README.md) and [Bedrock](bedrock/README.md).
+[Family IT Help Desk v0.1](family-it-helpdesk/README.md) — complete; authenticated serverless ticket intake, persistence and email.
 
-**Status:** Planned. No completed implementation is claimed. Add concise case studies with architecture, decisions, validation evidence, and cost closure.
+[Bedrock evaluation](bedrock/README.md) — complete; two-request human-reviewed cloud-security analysis.
+
+[RDS](rds/README.md) — planned, not replaced by DynamoDB.

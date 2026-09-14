@@ -1,34 +1,21 @@
-# AWS Budgets — starter case study
-**Status: Planned · Execution: Not started · Reward: Not checked · Cost closure: Not started**
+# AWS Budgets — cost visibility
+**Status: Complete · September 12, 2026 EDT · Budget retained**
 
-## Objective
-Create a cost budget and verify its scope and alert configuration.
+## Objective and architecture
+Establish an early-warning budget before deploying learning workloads.
+AWS billing data → monthly cost budget → private email recipient.
 
-## Proposed architecture
-Billing data → cost budget → verified notification recipient. Final configuration and diagram will be recorded after account eligibility and cost checks.
+## Implementation and security decisions
+The recorded configuration used AWS-Lab-Monthly-Budget, a $10 USD monthly threshold, all AWS services, and alerts at 85% actual, 100% actual, and 100% forecasted spend. The amount is an alert threshold, not permission to incur $10 out of pocket. Recipient details remain private.
 
-## Planned implementation
-Follow the account's Explore AWS budget activity; select a suitable cost budget and inspect its filters and alert thresholds.
-
-## Security decisions to validate
-Restrict billing access and redact recipient details. Alerts do not enforce a spending cap.
-
-## Acceptance and evidence
-Confirm budget exists, intended costs are included, and notification recipient/threshold settings are correct. Record any notification verification separately; do not generate charges to trigger an alert.
-Actual results: **Not run**. Add sanitized evidence; no completion claim is supported yet.
+## Validation
+The onboarding activity subsequently showed Completed with a $20 award. Alert settings were reviewed before creation; delivery of a threshold-triggered budget email was not demonstrated. No artificial spend was generated to test an alert.
 
 ## Troubleshooting
-Pending execution. Record observed symptoms, cause, fix, and retest; do not invent failures.
+The reward initially remained Not started after creation. The workflow continued without creating duplicate budgets; a later console checkpoint showed completion.
 
 ## Cost and cleanup
-Target: **$0 additional out-of-pocket cost**. Confirm eligible credits and current regional service/dependency pricing before creating resources. Record estimate, runtime, observed charges, credits applied, and later billing review separately.
-
-Retain a useful budget only after checking its pricing and chosen features. Remove duplicate test budgets and unneeded actions; record retained configuration.
+Retained intentionally for ongoing AWS cost visibility. A budget is not a hard spending cap. Actual usage, credit coverage and retained feature costs require periodic billing review; no measured $0 bill is claimed.
 
 ## Lessons learned
-Pending execution.
-
-## Completion
-Complete the minimum outcome, security checks, cleanup verification, and cost record before marking complete. Track promotional reward status separately. Optional extensions do not block completion.
-
-Follow the [AWS activity guide](../../README.md) and expand this brief using the [project template](../../../templates/PROJECT-TEMPLATE.md).
+Set cost visibility before provisioning, and separate reward-processing delays from resource failure. See the [completion record](../../COMPLETION-RECORD.md).

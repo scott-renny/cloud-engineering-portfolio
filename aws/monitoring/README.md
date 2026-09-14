@@ -1,5 +1,3 @@
-# monitoring
+# AWS monitoring
 
-Planned cloud logging, metrics, alerts, and COC telemetry integration.
-
-**Status:** Planned. No completed implementation is claimed. Add concise case studies with architecture, decisions, validation evidence, and cost closure.
+The [EC2 study](../compute/ec2/README.md) includes health and monitoring inspection; the [Family IT Help Desk](../projects/family-it-helpdesk/README.md) includes a CloudWatch logging path and SNS ticket notifications. A dedicated observability project and COC telemetry integration remain planned.
