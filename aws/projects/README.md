@@ -1,7 +1,7 @@
 # AWS projects
 
-[Family IT Help Desk v0.1](family-it-helpdesk/README.md) — complete; authenticated serverless ticket intake, persistence and email.
+[Family IT Help Desk](family-it-helpdesk/README.md) — v0.1 accepted; v0.2 authenticated admin ticket/status management is in progress and has validated the Submitted → In Progress path.
 
 [Bedrock evaluation](bedrock/README.md) — complete; two-request human-reviewed cloud-security analysis.
 
-[RDS](rds/README.md) — planned, not replaced by DynamoDB.
+[RDS / Aurora PostgreSQL](rds/README.md) — complete; IAM-authenticated PostgreSQL validation performed and disposable database resources/backups removed.
