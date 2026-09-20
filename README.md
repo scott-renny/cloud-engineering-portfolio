@@ -59,12 +59,12 @@ Keep experiments small, short-lived, and manually controlled. Budget alerts are 
 |---|---|
 | [Cyber Operations Center (COC)](https://github.com/scott-renny/cyber-operations-center-engineering-program) | Future cloud telemetry and defensive operations integration. This repository documents cloud architecture and controls; COC owns the operational detection and response perspective. |
 | [Project Ares](https://github.com/scott-renny/project_ares) | Future isolated, authorized cloud detection validation with separate lab credentials and explicit teardown. Integration is planned. |
-| [Oberon integration note](architecture/oberon-integration.md) | Future AI engineering connection, beginning with a bounded Bedrock evaluation. A public Oberon repository URL has not yet been verified. |
+| [Oberon integration note](architecture/oberon-integration.md) | Future AI engineering connection. The related [Oberon repository](https://github.com/scott-renny/oberon) is now available; no deployed cloud integration is claimed yet. |
 
 ## Progression
 1. Preserve the completed AWS starter milestones and continue cost monitoring for intentionally retained services.
 2. Extend AWS into least-privilege IAM, VPC design, logging, encryption, and repeatable infrastructure.
-3. Establish Azure identity, networking, compute, and security foundations.
+3. Plan and establish Azure identity, networking, compute, and security foundations; Azure planning began after completion of the AWS starter activities.
 4. Add GCP foundations, then justify cross-cloud projects through concrete requirements.
 
 Only delivered results belong in completed-project summaries. Publish concise decisions and representative evidence; keep credentials, raw account exports, private infrastructure details, and sensitive screenshots out of Git.
