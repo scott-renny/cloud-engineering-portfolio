@@ -1,6 +1,6 @@
 # Family IT Help Desk
 **v0.1 COMPLETE — September 13, 2026 EDT / September 14 UTC**  
-**v0.2: planning started; implementation not confirmed · v0.3: planned**
+**v0.2: IN PROGRESS — authenticated admin/status workflow implemented and under validation · v0.3: planned**
 
 ## Objective
 Turn family technology problems into authenticated, persistent tickets with automatic priority, immediate email notification, and a usable confirmation page. v0.1 is a working serverless application, with category-specific humor supplied by ordinary code.
@@ -26,7 +26,7 @@ The function serves the frontend and processes the API integration in us-east-2.
 ## Implementation
 Built incrementally: HTTP blueprint → frontend → server-generated ticket ID and priority → DynamoDB persistence → SNS email → Cognito approval and API Gateway JWT integration → final UI acceptance.
 
-DynamoDB uses ticketId as its string partition key, without a sort key or secondary indexes. Provisioned capacity was selected for the small workload. The execution role has logging access, table-specific dynamodb:PutItem, and topic-specific sns:Publish. Ticket data is stored before notification.
+DynamoDB uses ticketId as its string partition key, without a sort key or secondary indexes. Provisioned capacity was selected for the small workload. The execution role has logging access and scoped application permissions for ticket persistence/management and SNS publication. Ticket data is stored before notification. The exact live IAM action set should be re-audited before publishing a narrower claim.
 
 The branded Cognito login supports email self-registration and verification. ApprovedUsers is the application approval group. The browser app uses authorization-code/PKCE without a client secret; its approval refresh reads the access-token group claim. A 90-day refresh-token lifetime and 60-minute access/ID tokens were recorded, not a guarantee of uninterrupted sessions.
 
@@ -66,9 +66,10 @@ If retiring the app later, first preserve any needed ticket data privately, then
 ## Lessons learned
 Build one integration at a time and verify persistence and notification separately. A successful UI cannot alone prove database storage or email delivery. Keep presentation state honest: a created ticket is not yet in progress or resolved. Preserve the accepted v0.1 instead of reopening it for optional features.
 
-## Bounded roadmap
-- **v0.2:** HelpDeskAdmins boundary; GET /tickets, GET /tickets/{ticketId}, PATCH /tickets/{ticketId}/status; admin list/detail/status UI; Submitted → In Progress → Resolved. Planning is underway; group creation and route implementation are not yet confirmed.
+## v0.2 progress and bounded roadmap
+- **Implemented/observed:** Cognito `HelpDeskAdmins` group; protected admin ticket retrieval; Manage Tickets UI; backend status update path; restored-ticket rendering from authoritative backend state; successful `Submitted → In Progress` update with Stage 3 and the user-facing status synchronized after refresh.
+- **Still to validate before v0.2 completion:** `In Progress → Resolved` end-to-end, Stage 4 rendering, a fresh-ticket regression check, removal of temporary browser debug instrumentation, and a final server-side authorization/IAM review.
+- **v0.2 boundary:** authenticated admin list/detail/status management and `Submitted → In Progress → Resolved`; optional notes, assignments, analytics, search, reopening, attachments, and broader integrations remain outside the minimum.
 - **v0.3:** optional Bedrock troubleshooting with bounded requests/conversations. Security-sensitive or high-priority issues bypass AI and escalate deterministically. The core help desk must work without AI.
-- Notes, assignments, analytics, search, reopening, attachments, and broader integrations are outside the locked v0.2 minimum.
 
 [Completion record](../../COMPLETION-RECORD.md) · [Cloud portfolio](../../../README.md)
