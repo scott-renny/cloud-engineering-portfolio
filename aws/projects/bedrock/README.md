@@ -17,7 +17,7 @@ The first answer identified several real strengths but repeated an existing SSH 
 Prompt refinement improved relevance without making the answer authoritative. The useful outcome was the review process: compare advice to the actual configuration, reject redundant suggestions, and consider operational cost before adopting a control.
 
 ## Cost and cleanup
-The onboarding summary showed Bedrock completed and $60 total additional credits across three activities. Both requests ended; no provisioned throughput, dedicated endpoint, knowledge base, or agent was created. Exact billed inference cost was not supplied.
+Bedrock's onboarding activity completed successfully. The later AWS starter-work reconciliation reached 5/5 completed activities; the final account checkpoint after the RDS/Aurora lab showed $199.97 USD credits remaining. Both Bedrock requests ended; no provisioned throughput, dedicated endpoint, knowledge base, or agent was created. Exact billed inference cost was not isolated.
 
 This exercise is separate from the Help Desk's planned v0.3 AI assistant and the future Oberon integration.
 
