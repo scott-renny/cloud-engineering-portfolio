@@ -1,5 +1,7 @@
 # Oberon integration — planned
 
-Oberon is the related AI engineering workstream identified for this portfolio. Its public repository URL has not yet been verified; add a direct cross-link when available.
+[Oberon](https://github.com/scott-renny/oberon) is the related AI engineering workstream for this portfolio. The repository is now verified and linked, but no deployed AWS/Oberon integration is claimed here.
 
-The [Bedrock starter](../aws/projects/bedrock/README.md) can provide an initial evaluation of model behavior, access boundaries, and inference cost. Any future integration should specify inputs, synthetic evaluation data, acceptance checks, and cleanup. No Oberon connection or deployed AI system is claimed here.
+The [Bedrock starter](../aws/projects/bedrock/README.md) provides an initial human-reviewed evaluation of model behavior, cloud-security advice, and inference-cost awareness. Any future Oberon cloud integration should use bounded permissions, synthetic evaluation data where practical, explicit acceptance checks, auditable actions, and cost controls.
+
+Oberon's broader application-integration direction is API-first: it should use authorized application APIs rather than editing application databases directly. A future cloud adapter should follow the same principle.
