@@ -3,7 +3,7 @@
 
 A growing portfolio of cloud systems designed, built, secured, validated, and cleaned up with clear engineering evidence. AWS is the starting point, followed by Azure and GCP; multi-cloud work will follow demonstrated needs and completed provider foundations.
 
-**Current status — September 20, 2026:** All five AWS onboarding credit activities are complete: Budgets, EC2, Bedrock, Lambda web app, and RDS/Aurora. **[Family IT Help Desk](aws/projects/family-it-helpdesk/README.md)** remains the retained serverless project and v0.2 ticket-management work is in progress. The disposable Aurora PostgreSQL lab was validated with IAM authentication and SQL operations, then fully removed.
+**Current status — September 26, 2026:** All five AWS onboarding credit activities are complete: Budgets, EC2, Bedrock, Lambda web app, and RDS/Aurora. **[Family IT Help Desk](aws/projects/family-it-helpdesk/README.md)** remains the retained serverless project, and v0.2 authenticated ticket management is complete after end-to-end lifecycle validation. The disposable Aurora PostgreSQL lab was validated with IAM authentication and SQL operations, then fully removed.
 
 The [completion record](aws/COMPLETION-RECORD.md) distinguishes observed results, retained resources, and unverified billing/reward details.
 
@@ -13,7 +13,7 @@ The [completion record](aws/COMPLETION-RECORD.md) distinguishes observed results
 | 1 | [AWS Budgets](aws/fundamentals/aws-budgets/README.md) | Cost visibility and spending controls | Complete · retained |
 | 2 | [EC2](aws/compute/ec2/README.md) | Secure compute lifecycle | Complete · instance/EBS removed |
 | 3 | [RDS/Aurora](aws/projects/rds/README.md) | Managed PostgreSQL, IAM DB authentication, lifecycle and cleanup | Complete · cluster/backups removed |
-| 4 | [Lambda](aws/serverless/lambda/README.md) | Small web application and scoped execution | Complete · Help Desk v0.1 |
+| 4 | [Lambda](aws/serverless/lambda/README.md) | Serverless application, authenticated ticket workflow and scoped execution | Complete · Help Desk v0.2 |
 | 5 | [Bedrock](aws/projects/bedrock/README.md) | Bounded foundation-model evaluation | Complete · two-request evaluation |
 
 See the [AWS activity guide](aws/README.md) for eligibility checks and the completion workflow. Completed entries contain recorded outcomes, including the completed RDS/Aurora case study and teardown.
