@@ -1,6 +1,6 @@
 # Family IT Help Desk
 **v0.1 COMPLETE — September 13, 2026 EDT / September 14 UTC**  
-**v0.2: IN PROGRESS — authenticated admin/status workflow implemented and under validation · v0.3: planned**
+**v0.2 COMPLETE — September 26, 2026 · authenticated administration and full ticket lifecycle validated · v0.3: planned**
 
 ## Objective
 Turn family technology problems into authenticated, persistent tickets with automatic priority, immediate email notification, and a usable confirmation page. v0.1 is a working serverless application, with category-specific humor supplied by ordinary code.
@@ -66,10 +66,13 @@ If retiring the app later, first preserve any needed ticket data privately, then
 ## Lessons learned
 Build one integration at a time and verify persistence and notification separately. A successful UI cannot alone prove database storage or email delivery. Keep presentation state honest: a created ticket is not yet in progress or resolved. Preserve the accepted v0.1 instead of reopening it for optional features.
 
-## v0.2 progress and bounded roadmap
-- **Implemented/observed:** Cognito `HelpDeskAdmins` group; protected admin ticket retrieval; Manage Tickets UI; backend status update path; restored-ticket rendering from authoritative backend state; successful `Submitted → In Progress` update with Stage 3 and the user-facing status synchronized after refresh.
-- **Still to validate before v0.2 completion:** `In Progress → Resolved` end-to-end, Stage 4 rendering, a fresh-ticket regression check, removal of temporary browser debug instrumentation, and a final server-side authorization/IAM review.
-- **v0.2 boundary:** authenticated admin list/detail/status management and `Submitted → In Progress → Resolved`; optional notes, assignments, analytics, search, reopening, attachments, and broader integrations remain outside the minimum.
-- **v0.3:** optional Bedrock troubleshooting with bounded requests/conversations. Security-sensitive or high-priority issues bypass AI and escalate deterministically. The core help desk must work without AI.
+## v0.2 completion and bounded roadmap
+v0.2 is complete and frozen as the accepted baseline. Validation covered authenticated admin ticket retrieval, management UI, backend status updates, restored rendering from authoritative backend state, and the full `Submitted → In Progress → Resolved` lifecycle with Stages 2–4 synchronized to ticket state. A final fresh-ticket smoke test also passed after temporary browser debugging instrumentation was removed.
+
+Additional negative-path checks confirmed server-side required-field/category/impact validation and request-size rejection. A security-category ticket was created as Critical priority and displayed the security warning. These checks support the application boundary without treating client-supplied status or priority as authoritative.
+
+The v0.2 boundary remains authenticated admin list/detail/status management and the three-state lifecycle. Optional notes, assignments, analytics, search, reopening, attachments, and broader integrations remain outside this completed milestone.
+
+**v0.3:** optional Bedrock troubleshooting with bounded requests/conversations. Security-sensitive or high-priority issues bypass AI and escalate deterministically. The core help desk must continue to work without AI.
 
 [Completion record](../../COMPLETION-RECORD.md) · [Cloud portfolio](../../../README.md)
