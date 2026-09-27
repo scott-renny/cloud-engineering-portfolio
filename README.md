@@ -59,7 +59,7 @@ Keep experiments small, short-lived, and manually controlled. Budget alerts are 
 |---|---|
 | [Cyber Operations Center (COC)](https://github.com/scott-renny/cyber-operations-center-engineering-program) | Future cloud telemetry and defensive operations integration. This repository documents cloud architecture and controls; COC owns the operational detection and response perspective. |
 | [Project Ares](https://github.com/scott-renny/project_ares) | Future isolated, authorized cloud detection validation with separate lab credentials and explicit teardown. Integration is planned. |
-| [Oberon integration note](architecture/oberon-integration.md) | Future AI engineering connection. The related [Oberon repository](https://github.com/scott-renny/oberon) is now available; no deployed cloud integration is claimed yet. |
+| [Oberon integration note](architecture/oberon-integration.md) | Future AI engineering connection. A related personal AI-assistant project (private for now) may connect here later; no deployed cloud integration is claimed. |
 
 ## Progression
 1. Preserve the completed AWS starter milestones and continue cost monitoring for intentionally retained services.
